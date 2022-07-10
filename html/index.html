@@ -1,180 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Jaramillo</title>
-    <!-- NORMALIZE -->
-    <link rel="stylesheet" href="normalize.css">
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Jaramillo - JonhaDev</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;1,500&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ESTILOS -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- FAVICONS -->
+  <link rel="shortcut icon" href="/assets/icons/favicon298x298.png" type="image/x-icon">
 </head>
-
 <body>
-    <header class="header">
-        <img class="logo-home" src="" alt="Logo">
-        <nav class="navbar">
-            <a href="">
-                <img class="logo-nav" src="" alt="Logo">
-            </a>
-            <ul>
-                <a href="#home" class="nav-link"><li>Inicio</li></a>
-                <a href="#about" class="nav-link"><li>Sobre mi</li></a>
-                <a href="#portfolio" class="nav-link"><li>Portafolio</li></a>
-                <a href="#skills" class="nav-link"><li>Habilidades</li></a>
-                <a href="#contact" class="nav-link"><li>Contacto</li></a>
-            </ul>
-        </nav>
+  <header class="navbar-container">
+    <nav class="navbar-container__navbar">
+      <div class="navbar-container__logo-container" href="/"><img src="/assets/icons/iconLogo36x36.png"
+          alt="John Jaramillo animado sonriendo"></div>
+      <div class="navbar-container__icon-menu"><i>logo menu</i></div>
+      <ul class="navbar-container__nav-menu">
+        <a href="#home">
+          <li>Inicio</li>
+        </a>
+        <a href="#services">
+          <li>Servicios</li>
+        </a>
+        <a href="#about me">
+          <li>Sobre mi</li>
+        </a>
+        <a href="#works">
+          <li>Proyectos</li>
+        </a>
+        <a href="#contact">
+          <li>Contacto</li>
+        </a>
+        <div class="navbar-container__social-media social-media--navbar">
+          <a target="_blank" href="/"><i>Linkedin</i></a>
+          <a target="_blank" href="https://twitter.com/JohnhJaramillo"><i>Twitter</i></a>
+          <a target="_blank" href="https://github.com/JohnJaramillodev"><i>GitHub</i></a>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <section class="home-container" id="home">
+    <header class="home-container__title">
+      <h1>John Jaramillo</h1>
     </header>
-    <section id="home" class="home">
-        <img src="" alt="" class="photo-home">
-        <div class="text-home">
-            <p>Hola!</p>
-            <h2>soy <span>John Jaramillo</span></h2>
-            <p>Desarrollador</p>
-        </div>
-        <div class="home-contact">
-            <a target="_blank" href="" class="icon-contact"><i>E-mail</i></a>
-            <a target="_blank" href="" class="icon-contact"><i>Linkedin</i></a>
-            <a target="_blank" href="https://twitter.com/JohnhJaramillo" class="icon-contact"><i>Twitter</i></a>
-            <a target="_blank" href="https://github.com/JohnJaramillodev" class="icon-contact"><i>GitHub</i></a>
-            <div>line</div>
-        </div>
+    <p>Hola, soy</p>
+    <p class="home-container__subtitle">Desarrollador Web</p>
+    <p>¿Buscas a alguien que entienda tu visión? Me encantaría escucharte.</p>
+    <a class="boton boton--home" href="/">Charlemos Hoy</a>
+    <!-- <div><img src="/" alt="John Jaramillo animado, saludando"></div> -->
+    <div class="home-container__social-media social-media--home">
+      <a target="_blank" href="/"><i>Linkedin</i></a>
+      <a target="_blank" href="https://twitter.com/JohnhJaramillo"><i>Twitter</i></a>
+      <a target="_blank" href="https://github.com/JohnJaramillodev"><i>GitHub</i></a>
+      <!-- <span></span> -->
+    </div>
+    <a class="boton-bottom boton-bottom--contact" href="/"><i></i></a>
+  </section>
+  <main class="main-container">
+    <section class="services-container" id="services">
+      <header class="title-container">
+        <h2>mis servicios</h2>
+      </header>
+      <p>Brindo soluciones de diseño web para un rendimiento superior</p>
+      <div class="services-container__cards-container">
+        <article class="service-card">
+          <h3 class="service-card__title">Diseño Adaptativo</h3>
+          <div class="service-card__icon--container"><i></i></div>
+          <p>Tu sitio web siempre se verá perfecto. Transmite confianza al usuario al asegurar que la página se adapta a
+            cualquier dispositivo.</p>
+        </article>
+        <article class="service-card">
+          <h3 class="service-card__title">Rendimiento</h3>
+          <div class="service-card__icon--container"><i></i></div>
+          <p>Brinda una experiencia fluida y eficiente a tus usuarios con una respuesta rápida. aumenta la satisfacción
+            y compromiso con tu marca.</p>
+        </article>
+        <article class="service-card">
+          <h3 class="service-card__title">Accesibilidad</h3>
+          <div class="service-card__icon--container"><i></i></div>
+          <p>Facilita la vida de tus usuarios. Elimina las barreras físicas y digitales, proporciona una experiencia
+            óptima a una comunidad global diversa.</p>
+        </article>
+        <article class="service-card">
+          <h3 class="service-card__title">Google Analytics</h3>
+          <div class="service-card__icon--container"><i></i></div>
+          <p>Monitoriza el comportamiento de tus usuarios. Toma decisiones más inteligentes y estratégicas basadas en
+            datos.</p>
+        </article>
+        <article class="service-card">
+          <h3 class="service-card__title">Consultoría</h3>
+          <div class="service-card__icon--container"><i></i></div>
+          <p>Te ayudo a mejorar la usabilidad de tu sitio y a tener la seguridad de que está funcionando al máximo para
+            alcanzar tus objetivos.</p>
+        </article>
+      </div>
     </section>
-    <main>
-        <section id="about" class="about">
-            <h2>Sobre mi</h2>
-            <div>
-                <p>Hello! I'm a programmer who maintains, debugs and troubleshoots systems and software to ensure everything is running smoothly.</p>
-            </div>
-        </section>
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <h2>Portafolio</h2>
-                <div class="portfolio-grid">
-                    <div class="proyect-item">
-                        <picture>
-                            <source>
-                            <img src="" alt="Portfolio item">
-                        </picture>
-                        <div class="proyect-description">
-                            <h3>Nombre Proyecto</h3>
-                            <p>Tipo Proyecto</p>
-                            <div class="button-container">
-                                <a target="_blank" href="" class="button"><i>web</i></a>
-                                <a target="_blank" href="" class="button"><i>git</i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="proyect-item">
-                        <picture>
-                            <source>
-                            <img src="" alt="Portfolio item">
-                        </picture>
-                        <div class="proyect-description">
-                            <h3>Nombre Proyecto</h3>
-                            <p>Tipo Proyecto</p>
-                            <div class="button-container">
-                                <a target="_blank" href="" class="button"><i>web</i></a>
-                                <a target="_blank" href="" class="button"><i>git</i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="proyect-item">
-                        <picture>
-                            <source>
-                            <img src="" alt="Portfolio item">
-                        </picture>
-                        <div class="proyect-description">
-                            <h3>Nombre Proyecto</h3>
-                            <p>Tipo Proyecto</p>
-                            <div class="button-container">
-                                <a target="_blank" href="" class="button"><i>web</i></a>
-                                <a target="_blank" href="" class="button"><i>git</i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="proyect-item">
-                        <picture>
-                            <source>
-                            <img src="" alt="Portfolio item">
-                        </picture>
-                        <div class="proyect-description">
-                            <h3>Nombre Proyecto</h3>
-                            <p>Tipo Proyecto</p>
-                            <div class="button-container">
-                                <a target="_blank" href="" class="button"><i>web</i></a>
-                                <a target="_blank" href="" class="button"><i>git</i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="proyect-item">
-                        <picture>
-                            <source>
-                            <img src="" alt="Portfolio item">
-                        </picture>
-                        <div class="proyect-description">
-                            <h3>Nombre Proyecto</h3>
-                            <p>Tipo Proyecto</p>
-                            <div class="button-container">
-                                <a target="_blank" href="" class="button"><i>web</i></a>
-                                <a target="_blank" href="" class="button"><i>git</i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="proyect-item">
-                        <picture>
-                            <source>
-                            <img src="" alt="Portfolio item">
-                        </picture>
-                        <div class="proyect-description">
-                            <h3>Nombre Proyecto</h3>
-                            <p>Tipo Proyecto</p>
-                            <div class="button-container">
-                                <a target="_blank" href="" class="button"><i>web</i></a>
-                                <a target="_blank" href="" class="button"><i>git</i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2>Habilidades</h2>
-                <div class="item-skill">
-                    <i title="Html">Html</i>
-                </div>
-                <div class="item-skill">
-                    <i title="Css">Css</i>
-                </div>
-                <div class="item-skill">
-                    <i title="JavaScript">JavaScript</i>
-                </div>
-                <div class="item-skill">
-                    <i title="Git">Git</i>
-                </div>
-                <div class="item-skill">
-                    <i title="GitHub">GitHub</i>
-                </div>
-            </div>
-        </section>
-    </main>
-    <section id="contact" class="contact">
-
-        <div class="contact-item">
-            <a target="_blank" href="" class="icon-contact"><i>E-mail</i></a>
-            <a target="_blank" href="" class="icon-contact"><i>Linkedin</i></a>
-            <a target="_blank" href="https://twitter.com/JohnhJaramillo" class="icon-contact"><i>Twitter</i></a>
-            <a target="_blank" href="https://github.com/JohnJaramillodev" class="icon-contact"><i>GitHub</i></a>
-        </div>
-        <h2>Contáctame</h2>
+    <section class="about-container" id="about-me">
+      <header class="title-container">
+        <h2>sobre mi</h2>
+      </header>
+      <div class="about-container__personal-info">
+        <p>Como desarrollador web apasionado y entusiasta por el diseño web, disfruto de ayudar a las personas a
+          alcanzar su máximo potencial en línea. Me enorgullece brindar soluciones tecnológicas efectivas en diferentes
+          tipos de proyectos.</p>
+        <p>Me enfoco en la calidad y la atención al detalle, trabajo incansablemente para garantizar que los sitios web
+          que construyo sean funcionales, seguros y eficaces en su propósito.</p>
+        <p>Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y crecer en mi campo. Estoy
+          comprometido con brindar un servicio excepcional a mis clientes y ayudarles a alcanzar sus objetivos y metas.
+        </p>
+        <a href="/">Conoce un poco de mi historia...</a>
+      </div>
+      <article class="about-container__what-i-do">
+        <p class="subtitle">¿qué hago?</p>
+        <p>Mi propósito es crear soluciones en línea efectivas para mis clientes. Desarrollo sitios web personalizados y
+          adaptados a las necesidades de cada proyecto, brindando una experiencia única para cada usuario.</p>
+      </article>
+      <article class="about-container__how-i-do-it">
+        <p class="subtitle">¿cómo lo hago?</p>
+        <p>Me gusta trabajar de cerca con mis clientes para comprender sus necesidades y ofrecer soluciones innovadoras
+          que impulsen su negocio en línea.</p>
+        <p>Además, ofrezco servicios de mantenimiento y soporte para garantizar que los sitios web estén actualizados y
+          funcionen sin problemas.</p>
+      </article>
     </section>
-    <footer class="footer">
-        <p>Copyright &copy; 2022 - John Jaramillo <br> Todos los Derechos Reservados</p>
-    </footer>
+    <section class="works-container" id="works">
+      <header class="title-container">
+        <h2>mis proyectos</h2>
+      </header>
+      <p>Échale un vistazo a mi lista de proyectos seleccionados.</p>
+      <div class="works-container__cards-container">
+        <article class="work-card">
+          <h3 class="work-card__title">Título del proyecto</h3>
+          <i>equis</i>
+          <p>Esto es texto representa un copy atractivo la oferta Esto es un texto Esto es texto representa un copy
+            atractivo un copy atractivo un texto Esto es texto representa</p>
+          <h3 class="work-card__title">Tecnologías</h3>
+          <div class="work-card__tecnologies"><i>1</i><i>2</i><i>3</i></div>
+          <div class="work-card__mockups-container">
+            <img src="/" alt="proyecto visto desde un computador">
+            <img src="/" alt="proyecto visto desde un móvil">
+            <img src="/" alt="proyecto visto desde una tablet">
+          </div>
+          <div class="work-card__scroll-dots"><span></span><span></span><span></span></div>
+          <a class="boton" href="/"><i></i>Ver En Vivo</a>
+          <a class="boton boton--secundary" href="/"><i></i>Ver Código</a>
+          <i>sc</i>
+        </article>
+      </div>
+      <p><i></i>Mira más proyectos</p>
+    </section>
+  </main>
+  <footer class="contact-container" id="contact">
+    <header class="title-container"><h2>contacto</h2></header>
+    <p>¿Listo para llevar tu proyecto al siguiente nivel? ¡Hagamos que suceda!</p>
+    <a class="boton boton--footer" href="/">Charlemos Hoy</a>
+    <p>También puedes encontrarme por aquí</p>
+    <div class="contact-container__social-media social-media--footer">
+      <a target="_blank" href="/"><i>Linkedin</i></a>
+      <a target="_blank" href="https://twitter.com/JohnhJaramillo"><i>Twitter</i></a>
+      <a target="_blank" href="https://github.com/JohnJaramillodev"><i>GitHub</i></a>
+    </div>
+    <p>Este portafolio es de código abierto, encuentralo en mi <span>GitHub</span><i></i></p>
+    <p>Hecho por <span>John Jaramillo</span></p>
+    <!-- <ul>
+      <a href="#home"><li>Inicio</li></a>
+      <a href="#services"><li>Servicios</li></a>
+      <a href="#about me"><li>Sobre mi</li></a>
+      <a href="#works"><li>Proyectos</li></a>
+    </ul> -->
+    <a class="boton-bottom boton-bottom--goup" href="#home"><i>Up</i></a>
+  </footer>
 </body>
-
 </html>
