@@ -6,65 +6,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>John Jaramillo - JonhaDev</title>
 
+  <!-- FUENTES -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;1,500&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,700;1,500&family=Skranji:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- ESTILOS -->
   <link rel="stylesheet" href="/css/main.css">
 
   <!-- FAVICONS -->
   <link rel="shortcut icon" href="/assets/icons/favicon298x298.png" type="image/x-icon">
+
+  <!-- ICONS -->
+  <script src="https://kit.fontawesome.com/5cc47429a3.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header class="navbar-container">
     <nav class="navbar-container__navbar">
-      <div class="navbar-container__logo-container" href="/"><img src="/assets/icons/iconLogo36x36.png"
-          alt="John Jaramillo animado sonriendo"></div>
-      <div class="navbar-container__icon-menu"><i>logo menu</i></div>
+      <div class="navbar-container__logo-container" href="#"><img src="/assets/icons/logo298x298.png" alt="John Jaramillo animado sonriendo"></div>
+      <div class="navbar-container__icon-menu"><i class="fa-solid fa-ellipsis"></i></div>
       <ul class="navbar-container__nav-menu">
-        <a href="#home">
-          <li>Inicio</li>
-        </a>
-        <a href="#services">
-          <li>Servicios</li>
-        </a>
-        <a href="#about me">
-          <li>Sobre mi</li>
-        </a>
-        <a href="#works">
-          <li>Proyectos</li>
-        </a>
-        <a href="#contact">
-          <li>Contacto</li>
-        </a>
-        <div class="navbar-container__social-media social-media--navbar">
-          <a target="_blank" href="/"><i>Linkedin</i></a>
-          <a target="_blank" href="https://twitter.com/JohnhJaramillo"><i>Twitter</i></a>
-          <a target="_blank" href="https://github.com/JohnJaramillodev"><i>GitHub</i></a>
+        <a href="#home"><li>Inicio</li></a>
+        <a href="#checkpoint-services"><li>Servicios</li></a>
+        <a href="#checkpoint-about-me"><li>Sobre mi</li></a>
+        <a href="#checkpoint-works"><li>Proyectos</li></a>
+        <a href="#contact"><li>Contacto</li></a>
+        <div class="social-media social-media--navbar">
+          <a target="_blank" href="#"><img src="/assets/icons/linkedin.svg" alt=""></a>
+          <a target="_blank" href="#"><img src="/assets/icons/twitter.svg" alt=""></i></a>
+          <a target="_blank" href="#"><img src="/assets/icons/github.svg" alt=""></a>
         </div>
       </ul>
     </nav>
   </header>
-  <section class="home-container" id="home">
-    <header class="home-container__title">
-      <h1>John Jaramillo</h1>
-    </header>
-    <p>Hola, soy</p>
-    <p class="home-container__subtitle">Desarrollador Web</p>
-    <p>¿Buscas a alguien que entienda tu visión? Me encantaría escucharte.</p>
-    <a class="boton boton--home" href="/">Charlemos Hoy</a>
-    <!-- <div><img src="/" alt="John Jaramillo animado, saludando"></div> -->
-    <div class="home-container__social-media social-media--home">
-      <a target="_blank" href="/"><i>Linkedin</i></a>
-      <a target="_blank" href="https://twitter.com/JohnhJaramillo"><i>Twitter</i></a>
-      <a target="_blank" href="https://github.com/JohnJaramillodev"><i>GitHub</i></a>
-      <!-- <span></span> -->
-    </div>
-    <a class="boton-bottom boton-bottom--contact" href="/"><i></i></a>
-  </section>
   <main class="main-container">
-    <section class="services-container" id="services">
+    <section class="home-container" id="home">
+      <div class="home-container__info-container">
+        <header class="home-container__title">
+          <h1>John Jaramillo</h1>
+        </header>
+        <p>Hola, soy</p>
+        <p class="home-container__subtitle">Desarrollador Web</p>
+        <p>¿Buscas a alguien que entienda tu visión? Me encantaría escucharte.</p>
+        <a class="button button--home" href="#">Charlemos Hoy</a>
+      </div>
+      <!-- <div><img src="/" alt="John Jaramillo animado, saludando"></div> -->
+      <div class="social-media social-media--home">
+        <a target="_blank" href="#"><img src="/assets/icons/linkedin.svg" alt=""></a>
+        <a target="_blank" href="#"><img src="/assets/icons/twitter.svg" alt=""></i></a>
+        <a target="_blank" href="#"><img src="/assets/icons/github.svg" alt=""></a>
+        <!-- <span></span> -->
+      </div>
+      <a class="button-bottom button-bottom--contact" href="#"><img src="/assets/icons/email.svg" alt=""></a>
+    </section>
+    <section class="services-container">
       <header class="title-container">
         <h2>mis servicios</h2>
       </header>
@@ -72,37 +67,34 @@
       <div class="services-container__cards-container">
         <article class="service-card">
           <h3 class="service-card__title">Diseño Adaptativo</h3>
-          <div class="service-card__icon--container"><i></i></div>
-          <p>Tu sitio web siempre se verá perfecto. Transmite confianza al usuario al asegurar que la página se adapta a
-            cualquier dispositivo.</p>
+          <div class="service-card__icon-container"><img src="/assets/icons/laptop.svg" alt=""></div>
+          <p>Tu sitio web siempre se verá perfecto. Transmite confianza al usuario al asegurar que la página se adapta a cualquier dispositivo.</p>
         </article>
         <article class="service-card">
           <h3 class="service-card__title">Rendimiento</h3>
-          <div class="service-card__icon--container"><i></i></div>
-          <p>Brinda una experiencia fluida y eficiente a tus usuarios con una respuesta rápida. aumenta la satisfacción
-            y compromiso con tu marca.</p>
+          <div class="service-card__icon-container"><img src="/assets/icons/rocket.svg" alt=""></div>
+          <p>Brinda una experiencia fluida y eficiente a tus usuarios con una respuesta rápida. aumenta la satisfacción y compromiso con tu marca.</p>
         </article>
         <article class="service-card">
           <h3 class="service-card__title">Accesibilidad</h3>
-          <div class="service-card__icon--container"><i></i></div>
-          <p>Facilita la vida de tus usuarios. Elimina las barreras físicas y digitales, proporciona una experiencia
-            óptima a una comunidad global diversa.</p>
+          <div class="service-card__icon-container"><img src="/assets/icons/accessibility.svg" alt=""></div>
+          <p>Facilita la vida de tus usuarios. Elimina las barreras físicas y digitales, proporciona una experiencia óptima a una comunidad global diversa.</p>
         </article>
         <article class="service-card">
           <h3 class="service-card__title">Google Analytics</h3>
-          <div class="service-card__icon--container"><i></i></div>
-          <p>Monitoriza el comportamiento de tus usuarios. Toma decisiones más inteligentes y estratégicas basadas en
-            datos.</p>
+          <div class="service-card__icon-container"><img src="/assets/icons/googleAnalytics.svg" alt=""></div>
+          <p>Monitoriza el comportamiento de tus usuarios. Toma decisiones más inteligentes y estratégicas basadas en datos.</p>
         </article>
         <article class="service-card">
           <h3 class="service-card__title">Consultoría</h3>
-          <div class="service-card__icon--container"><i></i></div>
-          <p>Te ayudo a mejorar la usabilidad de tu sitio y a tener la seguridad de que está funcionando al máximo para
-            alcanzar tus objetivos.</p>
+          <div class="service-card__icon-container"><img src="/assets/icons/consultant.svg" alt=""></div>
+          <p>Te ayudo a mejorar la usabilidad de tu sitio y a tener la seguridad de que está funcionando al máximo para alcanzar tus objetivos.</p>
         </article>
       </div>
+      <!-- CHECKPOINT -->
+      <hr class="checkpoint" id="checkpoint-services">
     </section>
-    <section class="about-container" id="about-me">
+    <section class="about-container">
       <header class="title-container">
         <h2>sobre mi</h2>
       </header>
@@ -115,22 +107,22 @@
         <p>Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y crecer en mi campo. Estoy
           comprometido con brindar un servicio excepcional a mis clientes y ayudarles a alcanzar sus objetivos y metas.
         </p>
-        <a href="/">Conoce un poco de mi historia...</a>
+        <a href="#">Conoce un poco de mi historia...</a>
       </div>
       <article class="about-container__what-i-do">
-        <p class="subtitle">¿qué hago?</p>
-        <p>Mi propósito es crear soluciones en línea efectivas para mis clientes. Desarrollo sitios web personalizados y
-          adaptados a las necesidades de cada proyecto, brindando una experiencia única para cada usuario.</p>
+        <span class="about-container__subtitle">¿qué hago?</span>
+        <p>Mi propósito es crear soluciones en línea efectivas para mis clientes.</p>
+        <p>Desarrollo sitios web personalizados y adaptados a las necesidades de cada proyecto, brindando una experiencia única para cada usuario.</p>
       </article>
       <article class="about-container__how-i-do-it">
-        <p class="subtitle">¿cómo lo hago?</p>
-        <p>Me gusta trabajar de cerca con mis clientes para comprender sus necesidades y ofrecer soluciones innovadoras
-          que impulsen su negocio en línea.</p>
-        <p>Además, ofrezco servicios de mantenimiento y soporte para garantizar que los sitios web estén actualizados y
-          funcionen sin problemas.</p>
+        <span class="about-container__subtitle">¿cómo lo hago?</span>
+        <p>Me gusta trabajar de cerca con mis clientes para comprender sus necesidades y ofrecer soluciones innovadoras que impulsen su negocio en línea.</p>
+        <p>Además, ofrezco servicios de mantenimiento y soporte para garantizar que los sitios web estén actualizados y funcionen sin problemas.</p>
       </article>
+      <!-- CHECKPOINT -->
+      <hr class="checkpoint" id="checkpoint-about-me">
     </section>
-    <section class="works-container" id="works">
+    <section class="works-container">
       <header class="title-container">
         <h2>mis proyectos</h2>
       </header>
@@ -138,36 +130,43 @@
       <div class="works-container__cards-container">
         <article class="work-card">
           <h3 class="work-card__title">Título del proyecto</h3>
-          <i>equis</i>
-          <p>Esto es texto representa un copy atractivo la oferta Esto es un texto Esto es texto representa un copy
-            atractivo un copy atractivo un texto Esto es texto representa</p>
+          <i class="work-card__close">equis</i>
+          <p>Esto es texto representa un copy atractivo la oferta Esto es un texto Esto es texto representa un copy atractivo un copy</p>
           <h3 class="work-card__title">Tecnologías</h3>
-          <div class="work-card__tecnologies"><i>1</i><i>2</i><i>3</i></div>
+          <div class="work-card__tecnologies-container">
+            <div class="tecnologie"><img src="/assets/icons/figma.svg" alt=""></div>
+            <div class="tecnologie"><img src="/assets/icons/html.svg" alt=""></div>
+            <div class="tecnologie"><img src="/assets/icons/css.svg" alt=""></div>
+            <div class="tecnologie"><img src="/assets/icons/javascript.svg" alt=""></div>
+          </div>
           <div class="work-card__mockups-container">
-            <img src="/" alt="proyecto visto desde un computador">
-            <img src="/" alt="proyecto visto desde un móvil">
-            <img src="/" alt="proyecto visto desde una tablet">
+            <div><img src="/assets/img/mockupD.png" alt="proyecto visto desde una laptop"></div>
+            <div><img src="/assets/img/mockupTP.png" alt="proyecto visto desde un móvil y una tablet"></div>
           </div>
           <div class="work-card__scroll-dots"><span></span><span></span><span></span></div>
-          <a class="boton" href="/"><i></i>Ver En Vivo</a>
-          <a class="boton boton--secundary" href="/"><i></i>Ver Código</a>
-          <i>sc</i>
+          <a class="button" href="#"><i></i>Ver En Vivo</a>
+          <a class="button button--secundary" href="#"><i></i>Ver Código</a>
+          <span class="work-card__expand"></span>
         </article>
       </div>
-      <p><i></i>Mira más proyectos</p>
+      <a href=""><span class="works-container__plus"></span>Mira más proyectos</a>
+      <!-- CHECKPOINT -->
+      <hr class="checkpoint" id="checkpoint-works">
     </section>
   </main>
   <footer class="contact-container" id="contact">
     <header class="title-container"><h2>contacto</h2></header>
-    <p>¿Listo para llevar tu proyecto al siguiente nivel? ¡Hagamos que suceda!</p>
-    <a class="boton boton--footer" href="/">Charlemos Hoy</a>
-    <p>También puedes encontrarme por aquí</p>
-    <div class="contact-container__social-media social-media--footer">
-      <a target="_blank" href="/"><i>Linkedin</i></a>
-      <a target="_blank" href="https://twitter.com/JohnhJaramillo"><i>Twitter</i></a>
-      <a target="_blank" href="https://github.com/JohnJaramillodev"><i>GitHub</i></a>
+    <p>¿Listo para llevar tu proyecto al siguiente nivel? <br>¡Hagamos que suceda!</p>
+    <a class="button button--footer" href="#">Charlemos Hoy</a>
+    <div class="contact-container__info-social">
+      <p>También puedes encontrarme por aquí</p>
+      <div class="social-media social-media--footer">
+        <a target="_blank" href="#"><img src="/assets/icons/linkedin.svg" alt=""></a>
+        <a target="_blank" href="#"><img src="/assets/icons/twitter.svg" alt=""></i></a>
+        <a target="_blank" href="#"><img src="/assets/icons/github.svg" alt=""></a>
+      </div>
     </div>
-    <p>Este portafolio es de código abierto, encuentralo en mi <span>GitHub</span><i></i></p>
+    <p>Este portafolio es de código abierto, encuentralo en mi <a href="#"> GitHub</a><span></span></p>
     <p>Hecho por <span>John Jaramillo</span></p>
     <!-- <ul>
       <a href="#home"><li>Inicio</li></a>
@@ -175,7 +174,7 @@
       <a href="#about me"><li>Sobre mi</li></a>
       <a href="#works"><li>Proyectos</li></a>
     </ul> -->
-    <a class="boton-bottom boton-bottom--goup" href="#home"><i>Up</i></a>
+    <a class="button-bottom button-bottom--goup" href="#home"><img src="/assets/icons/arrowUp.svg" alt="flecha para desplazar hacia arriba"></a>
   </footer>
 </body>
 </html>

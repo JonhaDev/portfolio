@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+@function calculateRem($size) {
+  @return calc($size/16px)*1rem;
+}
+
+@mixin font-size($size, $height) {
+  font-size: calculateRem($size);
+  line-height: calculateRem($height)*1.5;
+}
+
+@mixin paragraphs($tab, $width, $max-width) {
+  padding-left: $tab;
+  width: $width;
+  max-width: $max-width;
+}
+
+@mixin title-underline() {
+  max-width: 96%;
+  border-bottom: 2px dashed $light-color;
+}
+
+@mixin titles($type) {
+  font-family: $fuente1;
+  @if($type == h2) {
+    text-transform: uppercase;
+    @include font-size(24px, 30px);
+
+  } @else if ($type == subtitle) {
+    text-transform: uppercase;
+    @include font-size(21px, 30px);
+
+  } @else if ($type == h3) {
+    width: fit-content;
+    padding-bottom: 4px;
+    color: $secundary-color;
+    @include font-size(18px, 16px);
+    @include title-underline();
+  }
+}
+
+@mixin links($size, $color) {
+  font-style: italic;
+
+  @include font-size($size, $size);
+
+  @if $color == blue-color {  
+    color: $action-secundary-color;
+  } @else if $color == light-color {  
+    color: $light-color;
+  }
+}
+
+@mixin caja() {
+  padding: 28px;
+  border: 2px solid $action-secundary-color;
+  border-radius: 14px;
+  background-color: $primary-color;
+}
+
+@mixin checkpoint {
+  position: absolute;
+  top: -44px;
+  opacity: 0;
+}
+
+@mixin media ($breakpoint) {  
+  @if $breakpoint == tablet-s {  
+    @media only screen and (min-width: 768px) { @content; }
+  }
+
+  // @else if $breakpoint == tablet-m {  
+  //   @media only screen and (min-width: 768px) { @content; }
+  // }
+  
+  @else if $breakpoint == desktop-s {  
+    @media only screen and (min-width: 992px) { @content; }
+  }
+  
+  @else if $breakpoint == desktop-m {  
+    @media only screen and (min-width: 1200px) { @content; }
+  }
+}

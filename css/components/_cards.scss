@@ -1,0 +1,109 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.service-card {
+    min-width: 280px;
+    max-width: 284px;
+    margin: 0 24px;
+
+    @include caja();
+  &__title {
+    @include titles(h3);
+    margin: 0 auto 18px;
+  }
+  &__icon-container {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 16px;
+    padding: 12px;
+    border: 2px solid $dark-color;
+    border-radius: 50%;
+    background-color: $light-color;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  p {
+    padding: 0 8px;
+    text-align: center;
+    
+    @include font-size(16px, 16px);
+  }
+}
+
+.work-card {
+  width: 94%;
+  min-width: 280px;
+  position: relative;
+  overflow: hidden;
+
+  @include caja();
+  &__title {
+    &:nth-child(1) {
+      margin: 0 auto;
+    }
+    @include titles(h3);
+  }
+  p {
+    width: 70%;
+    margin: 24px 0;
+    display: inline-block;
+
+    @include font-size(16px, 16px);
+  }
+  &__tecnologies-container {
+    margin: 24px 12px 16px;
+    display: flex;
+    gap: 12px;
+    .tecnologie {
+      width: auto;
+      height: 28px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__expand {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: 14px;
+    right: 10px;
+    background-image: url('/assets/icons/expand.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__mockups-container {
+    height: 180px;
+    position: absolute;
+    top: calc(50% - 100px);
+    right: calc(0% - 140px);
+    display: flex;
+    div {
+      width: 260px;
+      height: 100%;
+    }
+    div:nth-child(2) {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+
+  // MODAL
+  &__close {
+    display: none;
+  }
+  &__scroll-dots {
+    display: none;
+  }
+  a {
+    display: none;
+  }
+}

@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.about-container {
+  width: 100%;
+  padding: 32px 24px 80px;
+  position: relative;
+  background-color: $dark-color;
+  p {
+    @include paragraphs(12px, auto, 96%);
+  }
+  &__personal-info {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    a {
+      margin-top: 12px;
+      @extend p;
+      @include links(18px, blue-color);
+    }
+  }
+  &__subtitle {
+    @include titles(subtitle);
+    @include title-underline();
+  }
+  &__what-i-do {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &__how-i-do-it {
+    @extend .about-container__what-i-do;
+  }
+}

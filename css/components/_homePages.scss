@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.home-container {
+  height: 100vh;
+  position: relative;
+  &__info-container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, auto) auto 60px;
+    place-content: center;
+  }
+  &__title {
+    grid-row: 2/3;
+    h1 {
+      margin: 12px 0 10px;
+      font-family: $fuente1;
+      font-weight: 400;
+      letter-spacing: 1px;
+
+      @include font-size(42px, 26px);
+    }
+  }
+  &__subtitle {
+    margin-bottom: 16px;
+    font-family: $fuente1;
+    font-weight: 400;
+    letter-spacing: 1px;
+
+    @include font-size(30px, 20px);
+  }
+  p:nth-child(4) {
+    margin-bottom: 20px;
+    @include paragraphs(0, 280px, 368px);
+  }
+}

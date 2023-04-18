@@ -1,0 +1,56 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+footer {
+  display: grid;
+  grid-template-rows: repeat(3, auto) repeat(2, 1fr) auto;
+}
+
+.contact-container {
+  width: 100%;
+  height: 96vh;
+  padding: 32px 24px 24px;
+  position: relative;
+  background-color: $dark-color;
+  header + p {
+    margin-top: 24px;
+    @include paragraphs(12px, auto, 436px);
+  }
+  .button {
+    display: block;
+    margin: 28px auto 44px;
+  }
+  &__info-social {
+    place-self: center;
+    p {
+      margin: 0 auto 24px;
+      text-align: center;
+      @include paragraphs(0, auto, 220px);
+    }
+  }
+  div + p {
+    margin-bottom: 44px;
+    align-self: end;
+    @include paragraphs(0, auto, 324px);
+    a {
+      margin-right: 2px;
+      @include links(18px, blue-color);
+    }
+    span {
+      width: 10px;
+      height: 10px;
+      margin-right: 2px;
+      display: inline-block;
+      background-image: url('/assets/icons/arrowUR.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  p + p {
+    @include font-size(16px, 16px);
+    span {
+      @include links(16px, light-color);
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@use 'mixins' as *;
+
+.works-container {
+  padding: 32px 24px 80px;
+  position: relative;
+  > p {
+    margin-top: 24px;
+    @include paragraphs(12px, auto, 436px);
+  }
+  &__cards-container {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 28px;
+  }
+  > a {
+    margin: 36px 0 0;
+    display: block;
+    text-align: center;
+
+    @include links(18px, blue-color);
+    span {
+      width: 13px;
+      height: 13px;
+      margin-right: 2px;
+      display: inline-block;
+      background-image: url('/assets/icons/plus.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+  color: $light-color;
+}
+
+.main-container {
+  width: 100%;
+  height: fit-content;
+}
+
+.title-container {
+  @include title-underline();
+}
+
+h2 {
+  @include titles('h2');
+}
+
+p {
+  font-family: $fuente2;
+  font-weight: 400;
+  letter-spacing: .5px;
+
+  @include font-size(18px, 18px);
+}
+
+a {
+  font-family: $fuente2;
+  text-decoration: none;
+  letter-spacing: .5px;
+  color: $light-color;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.checkpoint {
+  @include checkpoint();
+}

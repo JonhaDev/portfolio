@@ -1,0 +1,17 @@
+@use 'mixins' as *;
+
+.services-container {
+  padding: 32px 24px 80px;
+  position: relative;
+  > p {
+    margin-top: 24px;
+    @include paragraphs(12px,auto, 400px);
+  }
+  &__cards-container {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+}

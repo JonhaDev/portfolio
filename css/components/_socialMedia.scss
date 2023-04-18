@@ -1,0 +1,32 @@
+// Home
+.social-media {
+  display: flex;
+  gap: 20px;
+  a {
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: auto;
+  }
+  a:nth-child(2) {
+    width: 33px;
+    height: auto;
+  }
+  &--home {
+    position: absolute;
+    bottom: 88px;
+    right: calc(50% - 68px);
+  }
+  &--footer {
+    justify-content: center;
+  }
+  &--navbar {
+    margin-top: 24px;
+    a {
+      width: 26px;
+    }
+    a:nth-child(2) {
+      width: 28px;
+    }
+  }
+}
