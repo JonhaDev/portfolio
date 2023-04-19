@@ -2,10 +2,8 @@
 @use 'mixins' as *;
 
 .about-container {
-  width: 100%;
-  padding: 32px 24px 80px;
-  position: relative;
   background-color: $dark-color;
+  @include sections();
   p {
     @include paragraphs(12px, auto, 96%);
   }
@@ -15,22 +13,26 @@
     flex-direction: column;
     gap: 24px;
     a {
-      margin-top: 12px;
+      margin: 12px 0 48px;
       @extend p;
       @include links(18px, blue-color);
+      @include media(tablet-s) {
+        margin-bottom: 60px;
+        @include links(24px, none);
+      }
     }
   }
   &__subtitle {
     @include titles(subtitle);
-    @include title-underline();
+    @include title-underline(subtitle);
   }
   &__what-i-do {
-    margin-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
   &__how-i-do-it {
     @extend .about-container__what-i-do;
+    margin-top: 48px;
   }
 }

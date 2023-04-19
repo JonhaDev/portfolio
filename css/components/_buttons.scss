@@ -8,8 +8,17 @@
   border-radius: 14px;
   color: $primary-color;
   text-align: center;
+  @include font-size(16px, 16px);
+  @include media(tablet-s) {
+    padding: 16px;
+    @include font-size(20px, 20px);
+  }
   &--home {
     width: 160px;
+    @include media(tablet-s) {
+      width: 228px;
+      @include font-size(22px, 20px);
+    }
   }
   &--footer {
     @extend .button--home;
@@ -25,13 +34,24 @@
   bottom: 16px;
   right: 12px;
   border-radius: 50%;
+  @include media(tablet-s) {
+    width: 64px;
+    height: 64px;
+    bottom: 28px;
+    right: 20px;
+  }
   &--contact {
     position: fixed;
     img {
       width: 20px;
-      height: 16px;
+      height: 18px;
       position: relative;
-      top: 12px
+      top: 12px;
+      @include media(tablet-s) {
+        width: 32px;
+        height: 24px;
+        top: 20px;
+      }
     }
   }
   &--goup {
@@ -41,7 +61,12 @@
       width: 18px;
       height: 18px;
       position: relative;
-      top: 11px
+      top: 11px;
+      @include media(tablet-s) {
+        width: 30px;
+        height: 30px;
+        top: 16px;
+      }
     }
   }
 }

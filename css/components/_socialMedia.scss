@@ -1,4 +1,6 @@
-// Home
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .social-media {
   display: flex;
   gap: 20px;
@@ -16,12 +18,35 @@
     position: absolute;
     bottom: 88px;
     right: calc(50% - 68px);
+    @include media(tablet-s) {
+      right: calc(50% - 96px);
+      gap: 28px;
+      a {
+        width: 44px;
+      }
+      a:nth-child(2) {
+        width: 48px;
+      }
+    }
   }
   &--footer {
     justify-content: center;
+    @include media(tablet-s) {
+      right: calc(50% - 96px);
+      gap: 32px;
+      a {
+        width: 48px;
+      }
+      a:nth-child(2) {
+        width: 52px;
+      }
+    }
   }
   &--navbar {
     margin-top: 24px;
+    @include media(tablet-s) {
+      display: none;
+    }
     a {
       width: 26px;
     }

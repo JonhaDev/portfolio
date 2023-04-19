@@ -1,11 +1,13 @@
 @use 'mixins' as *;
 
 .works-container {
-  padding: 32px 24px 80px;
-  position: relative;
+  @include sections();
   > p {
     margin-top: 24px;
     @include paragraphs(12px, auto, 436px);
+    @include media(tablet-s) {
+      @include paragraphs(none, none, 480px);
+    }
   }
   &__cards-container {
     margin-top: 28px;
@@ -13,9 +15,13 @@
     align-items: center;
     flex-direction: column;
     gap: 28px;
+    @include media(tablet-s) {
+      margin-top: 36px;
+      gap: 32px;
+    }
   }
   > a {
-    margin: 36px 0 0;
+    margin-top: 36px;
     display: block;
     text-align: center;
 
@@ -29,6 +35,10 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+    }
+    @include media(tablet-s) {
+      margin-top: 60px;
+      @include links(24px, none);
     }
   }
 }

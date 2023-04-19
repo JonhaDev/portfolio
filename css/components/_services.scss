@@ -1,11 +1,13 @@
 @use 'mixins' as *;
 
 .services-container {
-  padding: 32px 24px 80px;
-  position: relative;
+  @include sections();
   > p {
     margin-top: 24px;
     @include paragraphs(12px,auto, 400px);
+    @include media(tablet-s) {
+      @include paragraphs(12px,auto, 480px);
+    }
   }
   &__cards-container {
     margin-top: 28px;
@@ -13,5 +15,9 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 28px;
+    @include media(tablet-s) {
+      margin-top: 36px;
+      gap: 32px 24px;
+    }
   }
 }

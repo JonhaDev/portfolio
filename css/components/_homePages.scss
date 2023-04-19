@@ -4,11 +4,30 @@
 .home-container {
   height: 100vh;
   position: relative;
+  &__logo-container {
+    display: none;
+    @include media(tablet-s) {
+      width: 70%;
+      height: 40%;
+      margin: 0 auto 12px;
+      display: grid;
+      img {
+        width: 220px;
+        place-self: end center;
+      }
+    }
+  }
   &__info-container {
     height: 100%;
     display: grid;
     grid-template-rows: repeat(4, auto) auto 60px;
     place-content: center;
+    @include media(tablet-s) {
+      height: auto;
+      p {
+        @include font-size(28px, 26px);
+      }
+    }
   }
   &__title {
     grid-row: 2/3;
@@ -17,8 +36,11 @@
       font-family: $fuente1;
       font-weight: 400;
       letter-spacing: 1px;
-
       @include font-size(42px, 26px);
+      @include media(tablet-s) {
+        margin: 16px 0 12px;
+        @include font-size(76px, 48px);
+      }
     }
   }
   &__subtitle {
@@ -26,11 +48,17 @@
     font-family: $fuente1;
     font-weight: 400;
     letter-spacing: 1px;
-
     @include font-size(30px, 20px);
+    @include media(tablet-s) {
+      @include font-size(54px, 36px);
+    }
   }
   p:nth-child(4) {
     margin-bottom: 20px;
-    @include paragraphs(0, 280px, 368px);
+    @include paragraphs(initial, 280px, auto);
+    @include media(tablet-s) {
+      margin-bottom: 28px;
+      @include paragraphs(initial, auto, 480px);
+    }
   }
 }

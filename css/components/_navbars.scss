@@ -9,6 +9,10 @@
   z-index: 10;
   border-radius: 0 0 14px 14px;
   background-color: $dark-color;
+  @include media(tablet-s) {
+    height: 72px;
+    padding: 0 40px;
+  }
   &__navbar {
     height: 100%;
     display: flex;
@@ -18,11 +22,18 @@
   &__logo-container {
     width: 32px;
     height: 32px;
+    @include media(tablet-s) {
+      width: 44px;
+      height: 44px;
+    }
     img {
       width: 100%;
     }
   }
   &__icon-menu {
+    @include media(tablet-s) {
+      display: none;
+    }
     i {
       font-size: 48px;
       color: $secundary-color;
@@ -40,9 +51,18 @@
     gap: 14px;
     border-bottom-left-radius: 14px;
     background-color: $dark-color;
+    @include media(tablet-s) {
+      padding: 0;
+      position: initial;
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
     a li {
-      font-family: $fuente2;
       @include font-size(16px, 16px);
+      @include media(tablet-s) {
+        @include font-size(22px, 20px);
+      }
     }
   }
 }

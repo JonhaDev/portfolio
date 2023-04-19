@@ -15,27 +15,42 @@
   max-width: $max-width;
 }
 
-@mixin title-underline() {
+@mixin title-underline($type) {
   max-width: 96%;
   border-bottom: 2px dashed $light-color;
+  @if ($type == subtitle) {
+    width: fit-content;
+    padding-right: 24px;
+  }
 }
 
 @mixin titles($type) {
   font-family: $fuente1;
   @if($type == h2) {
     text-transform: uppercase;
-    @include font-size(24px, 30px);
+    font-weight: 400;
+    @include font-size(26px, 32px);
+    @include media(tablet-s) {
+      @include font-size(30px, 36px);
+    }
 
   } @else if ($type == subtitle) {
     text-transform: uppercase;
-    @include font-size(21px, 30px);
+    @include font-size(22px, 30px);
+    @include media(tablet-s) {
+      @include font-size(26px, 34px);
+    }
 
   } @else if ($type == h3) {
     width: fit-content;
     padding-bottom: 4px;
     color: $secundary-color;
-    @include font-size(18px, 16px);
-    @include title-underline();
+    @include font-size(22px, 20px);
+    @include title-underline(none);
+    @include media(tablet-s) {
+      text-align: center;
+      @include font-size(26px, 24px);
+    }
   }
 }
 
@@ -46,8 +61,15 @@
 
   @if $color == blue-color {  
     color: $action-secundary-color;
-  } @else if $color == light-color {  
-    color: $light-color;
+  }
+}
+
+@mixin sections() {
+  width: 100%;
+  padding: 32px 24px 80px;
+  position: relative;
+  @include media(tablet-s) {
+    padding: 52px 80px 100px;
   }
 }
 
@@ -69,9 +91,9 @@
     @media only screen and (min-width: 768px) { @content; }
   }
 
-  // @else if $breakpoint == tablet-m {  
-  //   @media only screen and (min-width: 768px) { @content; }
-  // }
+  @else if $breakpoint == tablet-m {  
+    @media only screen and (min-width: 820px) { @content; }
+  }
   
   @else if $breakpoint == desktop-s {  
     @media only screen and (min-width: 992px) { @content; }

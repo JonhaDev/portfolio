@@ -18,11 +18,11 @@ body {
 }
 
 .title-container {
-  @include title-underline();
+  @include title-underline(none);
 }
 
 h2 {
-  @include titles('h2');
+  @include titles(h2);
 }
 
 p {
@@ -31,6 +31,9 @@ p {
   letter-spacing: .5px;
 
   @include font-size(18px, 18px);
+  @include media(tablet-s) {
+    @include font-size(24px, 24px);
+  }
 }
 
 a {
