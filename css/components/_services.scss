@@ -4,13 +4,14 @@
   @include sections();
   > p {
     margin-top: 24px;
-    @include paragraphs(12px,auto, 400px);
+    @include paragraphs(12px, auto, 400px);
     @include media(tablet-s) {
-      @include paragraphs(12px,auto, 480px);
+      @include paragraphs(none, auto, 480px);
+      @include font-size(24px, 24px);
     }
   }
   &__cards-container {
-    margin-top: 28px;
+    margin: 28px auto 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -18,6 +19,9 @@
     @include media(tablet-s) {
       margin-top: 36px;
       gap: 32px 24px;
+    }
+    @include media(desktop-s) {
+      max-width: 1008px;
     }
   }
 }

@@ -2,24 +2,46 @@
 @use 'mixins' as *;
 
 footer {
+  max-height: 740px;
   display: grid;
   grid-template-rows: repeat(3, auto) repeat(2, 1fr) auto;
+  @include media(tablet-s) {
+    max-height: 800px;
+  }
+  @include media(desktop-s) {
+    max-height: 600px;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(3, max-content) 1fr max-content;
+  }
 }
 
 .contact-container {
   height: 96vh;
-  max-height: 760px;
   background-color: $dark-color;
   @include sections();
   padding-bottom: 24px;
   @include media(tablet-s) {
     padding-bottom: 40px;
   }
+  @include media(desktop-s) {
+    padding-bottom: 20px;
+  }
+  header {
+    @include media(desktop-s) {
+      grid-column: 1/3;
+      grid-row: 1/2;
+    }
+  }
   header + p {
     margin-top: 24px;
     @include paragraphs(12px, auto, 436px);
     @include media(tablet-s) {
       @include paragraphs(initial, auto, 572px);
+      @include font-size(24px, 24px);
+    }
+    @include media(desktop-s) {
+      grid-column: 1/2;
+      grid-row: 2/3;
     }
   }
   .button {
@@ -28,16 +50,29 @@ footer {
     @include media(tablet-s) {
       margin: 32px auto;
     }
+    @include media(desktop-s) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      margin: 32px 0;
+    }
   }
   &__info-social {
     place-self: center;
+    @include media(desktop-s) {
+      grid-column: 2/3;
+      grid-row: 4/5;
+      place-self: end;
+    }
     p {
       text-align: center;
       margin: 0 auto 24px;
-      @include paragraphs(initial, auto, 220px);
+      @include paragraphs(initial, auto, fit-content);
       @include media(tablet-s) {
         margin: 12px auto 36px;
-        @include paragraphs(initial, auto, 280px);
+      }
+      @include media(desktop-s) {
+        margin-bottom: 24px;
+        @include font-size(20px, 20px);
       }
     }
   }
@@ -48,11 +83,16 @@ footer {
     @include media(tablet-s) {
       @include paragraphs(initial, auto, px);
     }
+    @include media(desktop-s) {
+      margin: 0;
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
     a {
       margin-right: 2px;
       @include links(18px, blue-color);
       @include media(tablet-s) {
-        @include links(24px, initial);
+        @include links(22px, initial);
       }
     }
     span {
@@ -65,21 +105,43 @@ footer {
       background-position: center;
       background-repeat: no-repeat;
       @include media(tablet-s) {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
       }
     }
   }
   p + p {
     @include font-size(16px, 16px);
     @include media(tablet-s) {
-      @include font-size(24px, 16px);
+      @include font-size(18px, 16px);
+    }
+    @include media(desktop-s) {
+      margin-top: 36px;
+      grid-column: 1/3;
+      grid-row: 5/6;
+      justify-self: center;
     }
     span {
       @include links(16px, 16px);
       @include media(tablet-s) {
-        @include links(24px, initial);
+        @include links(18px, initial);
       }
+    }
+  }
+  &__navmenu {
+    display: none;
+    @include media(desktop-s) {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      grid-column: 2/3;
+      grid-row: 2/4;
+      justify-self: end;
+      text-align: end;
+    }
+    a {
+      @include font-size(20px, 20px);
     }
   }
 }

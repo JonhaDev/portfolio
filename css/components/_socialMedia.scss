@@ -18,6 +18,7 @@
     position: absolute;
     bottom: 88px;
     right: calc(50% - 68px);
+    z-index: 10;
     @include media(tablet-s) {
       right: calc(50% - 96px);
       gap: 28px;
@@ -26,6 +27,25 @@
       }
       a:nth-child(2) {
         width: 48px;
+      }
+    }
+    @include media(desktop-s) {
+      width: fit-content;
+      flex-direction: column;
+      position: fixed;
+      left: 48px;
+      bottom: 0;
+      a {
+        width: 32px;
+      }
+      a:nth-child(2) {
+        width: 36px;
+      }
+      span {
+        background-color: $light-color;
+        height: 140px;
+        width: 1px;
+        margin: 0 auto;
       }
     }
   }
@@ -39,6 +59,14 @@
       }
       a:nth-child(2) {
         width: 52px;
+      }
+    }
+    @include media(desktop-s) {
+      a {
+        width: 36px;
+      }
+      a:nth-child(2) {
+        width: 40px;
       }
     }
   }

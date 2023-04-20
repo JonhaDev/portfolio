@@ -7,6 +7,7 @@
     @include paragraphs(12px, auto, 436px);
     @include media(tablet-s) {
       @include paragraphs(none, none, 480px);
+      @include font-size(24px, 24px);
     }
   }
   &__cards-container {
@@ -38,7 +39,7 @@
     }
     @include media(tablet-s) {
       margin-top: 60px;
-      @include links(24px, none);
+      @include links(22px, none);
     }
   }
 }

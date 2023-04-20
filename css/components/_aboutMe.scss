@@ -4,35 +4,57 @@
 .about-container {
   background-color: $dark-color;
   @include sections();
+  @include media(desktop-s) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 24px;
+  }
+  .title-container {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
   p {
     @include paragraphs(12px, auto, 96%);
+    @include media(desktop-s) {
+      @include paragraphs(none, auto, 98%);
+    }
   }
   &__personal-info {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    grid-column: 1/2;
+    grid-row: 2/4;
     a {
       margin: 12px 0 48px;
       @extend p;
       @include links(18px, blue-color);
       @include media(tablet-s) {
         margin-bottom: 60px;
-        @include links(24px, none);
+        @include links(22px, none);
       }
     }
   }
   &__subtitle {
     @include titles(subtitle);
-    @include title-underline(subtitle);
   }
   &__what-i-do {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @include media(desktop-s) {
+      margin-top: 24px;
+      grid-column: 2/3;
+      grid-row: 2/3;
+    }
   }
   &__how-i-do-it {
     @extend .about-container__what-i-do;
     margin-top: 48px;
+    @include media(desktop-s) {
+      grid-row: 3/4;
+    }
   }
 }

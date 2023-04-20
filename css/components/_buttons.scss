@@ -10,14 +10,13 @@
   text-align: center;
   @include font-size(16px, 16px);
   @include media(tablet-s) {
-    padding: 16px;
+    padding: 12px;
     @include font-size(20px, 20px);
   }
   &--home {
     width: 160px;
     @include media(tablet-s) {
-      width: 228px;
-      @include font-size(22px, 20px);
+      width: 220px;
     }
   }
   &--footer {
@@ -33,10 +32,11 @@
   position: absolute;
   bottom: 16px;
   right: 12px;
+  z-index: 10;
   border-radius: 50%;
   @include media(tablet-s) {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     bottom: 28px;
     right: 20px;
   }
@@ -48,24 +48,27 @@
       position: relative;
       top: 12px;
       @include media(tablet-s) {
-        width: 32px;
-        height: 24px;
-        top: 20px;
+        width: 24px;
+        height: 22px;
+        top: 14px;
       }
     }
   }
   &--goup {
     margin: 0;
     bottom: 24px;
+    @include media(desktop-s) {
+      display: none;
+    }
     img {
       width: 18px;
       height: 18px;
       position: relative;
       top: 11px;
       @include media(tablet-s) {
-        width: 30px;
-        height: 30px;
-        top: 16px;
+        width: 24px;
+        height: 24px;
+        top: 12px;
       }
     }
   }
