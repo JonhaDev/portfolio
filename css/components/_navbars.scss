@@ -6,9 +6,11 @@
   height: 48px;
   padding: 0 20px;
   position: fixed;
-  z-index: 10;
+  z-index: 300;
   border-radius: 0 0 14px 14px;
-  background-color: $dark-color;
+  background-color: getOpacity($dark-color, .9);
+  transform: translateY(-84px);
+  @include shadows(navbars, $black);
   @include media(tablet-s) {
     height: 64px;
     padding: 0 40px;
@@ -21,6 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: inherit;
     @include media(desktop-s) {
       display: grid;
       grid-template-columns: auto 1fr;
@@ -39,47 +42,83 @@
     }
     img {
       width: 100%;
+      @include shadows(icons2, $black);
     }
   }
   &__icon-menu {
+    height: 28px;
+    display: flex;
+    place-items: center;
+    gap: 4px;
+    span {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $secundary-color;
+    }
+    img {
+      width: 22px;
+      height: 22px;
+      position: relative;
+      top: 12px;
+      right: 8px;
+      z-index: 20;
+    }
     @include media(tablet-s) {
       display: none;
     }
-    i {
-      font-size: 48px;
-      color: $secundary-color;
+    &:hover {
+      cursor: pointer;
     }
   }
   &__nav-menu {
     padding: 36px 48px 56px;
     position: absolute;
-    top: 36px;
+    top: 40px;
     right: 0;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 14px;
     border-bottom-left-radius: 14px;
-    background-color: $dark-color;
+    background-color: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
     @include media(tablet-s) {
+      margin-top: 8px;
       padding: 0;
       position: initial;
-      display: flex;
       flex-direction: row;
       gap: 24px;
       background-color: initial;
+      visibility: visible;
+      opacity: 1;
     }
     @include media(desktop-s) {
-      margin-top: 10px;
       justify-self: center;
-      gap: 28px
+      gap: 28px;
+      visibility: inherit;
     }
-    a li {
+    li a {
+      position: relative;
+      border-bottom: 2px solid transparent;
       @include font-size(16px, 16px);
       @include media(tablet-s) {
         @include font-size(20px, 20px);
       }
+      &:hover {
+        color: $action-primary-color;
+        border-bottom: 2px solid currentColor;
+        transition: all 400ms ease-out 50ms;
+      }
+      &:active {
+        transform: scale(.94);
+        transition: none;
+      }
+      transition: all 300ms ease-out;
     }
   }
 }

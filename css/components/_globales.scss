@@ -5,9 +5,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+  width: 100%;
   background-color: $primary-color;
   color: $light-color;
 }
@@ -46,6 +48,7 @@ a {
   text-decoration: none;
   letter-spacing: .5px;
   color: $light-color;
+  border-bottom: 2px solid transparent;
 }
 
 img {
@@ -56,6 +59,51 @@ ul {
   list-style: none;
 }
 
+.modal-background-close {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 46px;
+  z-index: -1;
+  background-color: getOpacity($black, .5);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.bubble-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  opacity: .4;
+  overflow: hidden;
+  &__bubbles {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    span {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      background-color: getOpacity($secundary-color, .6);
+      margin: 0 4px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 8px getOpacity($secundary-color, .7),
+        0 0 25px $action-primary-color,
+        0 0 75px $action-primary-color;
+      animation: bubbles 20s linear infinite;
+      animation-duration: calc(350s/var(--i));
+    }
+    span:nth-child(even){
+      background-color: getOpacity($action-secundary-color, .6);
+      box-shadow: 0 0 10px 8px getOpacity($action-secundary-color, .7),
+        0 0 25px $action-secundary-color,
+        0 0 75px $action-secundary-color;
+    }
+  }
+}
+
 .checkpoint {
-  @include checkpoint();
+  @include checkpoints();
 }

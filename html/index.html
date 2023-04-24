@@ -14,23 +14,23 @@
   <!-- ESTILOS -->
   <link rel="stylesheet" href="/css/main.css">
 
-  <!-- FAVICONS -->
-  <link rel="shortcut icon" href="/assets/icons/favicon298x298.png" type="image/x-icon">
-
-  <!-- ICONS -->
-  <script src="https://kit.fontawesome.com/5cc47429a3.js" crossorigin="anonymous"></script>
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.png" type="image/x-icon">
+  
+  <!-- SCROLLREVEAL -->
+  <script src="/js/scrollreveal.js"></script>
 </head>
 <body>
   <header class="navbar-container">
     <nav class="navbar-container__navbar">
-      <div class="navbar-container__logo-container" href="#"><img src="/assets/icons/logo298x298.png" alt="John Jaramillo animado sonriendo"></div>
-      <div class="navbar-container__icon-menu"><i class="fa-solid fa-ellipsis"></i></div>
-      <ul class="navbar-container__nav-menu">
-        <a href="#home"><li>Inicio</li></a>
-        <a href="#checkpoint-services"><li>Servicios</li></a>
-        <a href="#checkpoint-about-me"><li>Sobre mi</li></a>
-        <a href="#checkpoint-works"><li>Proyectos</li></a>
-        <a href="#contact"><li>Contacto</li></a>
+      <a href="/html/index.html" class="navbar-container__logo-container"><img src="/assets/icons/logo64x64.svg" alt="John Jaramillo animado sonriendo"></a>
+      <div id="icon-menu" class="navbar-container__icon-menu"><span></span><span></span><span></span></div>
+      <ul id="topnav-menu" class="navbar-container__nav-menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#checkpoint-services">Servicios</a></li>
+        <li><a href="#checkpoint-about-me">Sobre mi</a></li>
+        <li><a href="#checkpoint-works">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
         <div class="social-media social-media--navbar">
           <a target="_blank" href="#"><img src="/assets/icons/linkedin.svg" alt=""></a>
           <a target="_blank" href="#"><img src="/assets/icons/twitter.svg" alt=""></i></a>
@@ -46,9 +46,9 @@
         <header class="home-container__title">
           <h1>John Jaramillo</h1>
         </header>
-        <p>Hola, soy</p>
+        <p class="scroll-iAm">Hola, soy</p>
         <span class="home-container__subtitle">Desarrollador Web</span>
-        <p>¿Buscas a alguien que entienda tu visión? Me encantaría escucharte.</p>
+        <p class="scroll-copyHome">¿Buscas a alguien que entienda tu visión? Me encantaría escucharte.</p>
         <a class="button button--home" href="#">Charlemos Hoy</a>
       </div>
       <div class="social-media social-media--home">
@@ -63,7 +63,7 @@
       <header class="title-container">
         <h2>mis servicios</h2>
       </header>
-      <p>Brindo soluciones de diseño web para un rendimiento superior.</p>
+      <p class="scroll-paragraphs">Brindo soluciones de diseño web para un rendimiento superior.</p>
       <div class="services-container__cards-container">
         <article class="service-card">
           <h3 class="service-card__title">Diseño Adaptativo</h3>
@@ -99,25 +99,21 @@
         <h2>sobre mi</h2>
       </header>
       <div class="about-container__personal-info">
-        <p>Como desarrollador web apasionado y entusiasta por el diseño web, disfruto de ayudar a las personas a
-          alcanzar su máximo potencial en línea. Me enorgullece brindar soluciones tecnológicas efectivas en diferentes
-          tipos de proyectos.</p>
-        <p>Me enfoco en la calidad y la atención al detalle, trabajo incansablemente para garantizar que los sitios web
-          que construyo sean funcionales, seguros y eficaces en su propósito.</p>
-        <p>Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y crecer en mi campo. Estoy
-          comprometido con brindar un servicio excepcional a mis clientes y ayudarles a alcanzar sus objetivos y metas.
+        <p class="scroll-paragraphs2">Como desarrollador web apasionado y entusiasta por el diseño web, disfruto de ayudar a las personas a alcanzar su máximo potencial en línea. Me enorgullece brindar soluciones tecnológicas efectivas en diferentes tipos de proyectos.</p>
+        <p class="scroll-paragraphs2">Me enfoco en la calidad y la atención al detalle, trabajo incansablemente para garantizar que los sitios web que construyo sean funcionales, seguros y eficaces en su propósito.</p>
+        <p class="scroll-paragraphs2">Siempre estoy en busca de nuevos desafíos y oportunidades para aprender y crecer en mi campo. Estoy comprometido con brindar un servicio excepcional a mis clientes y ayudarles a alcanzar sus objetivos y metas.
         </p>
-        <a href="#">Conoce un poco de mi historia...</a>
+        <a class="scroll-paragraphs2" href="#">Conoce un poco de mi historia...</a>
       </div>
       <article class="about-container__what-i-do">
-        <span class="about-container__subtitle">¿qué hago?</span>
-        <p>Mi propósito es crear soluciones en línea efectivas para mis clientes.</p>
-        <p>Desarrollo sitios web personalizados y adaptados a las necesidades de cada proyecto, brindando una experiencia única para cada usuario.</p>
+        <span class="about-container__subtitle title-container">¿qué hago?</span>
+        <p class="scroll-paragraphs2">Mi propósito es crear soluciones en línea efectivas para mis clientes.</p>
+        <p class="scroll-paragraphs2">Desarrollo sitios web personalizados y adaptados a las necesidades de cada proyecto, brindando una experiencia única para cada usuario.</p>
       </article>
       <article class="about-container__how-i-do-it">
-        <span class="about-container__subtitle">¿cómo lo hago?</span>
-        <p>Me gusta trabajar de cerca con mis clientes para comprender sus necesidades y ofrecer soluciones innovadoras que impulsen su negocio en línea.</p>
-        <p>Además, ofrezco servicios de mantenimiento y soporte para garantizar que los sitios web estén actualizados y funcionen sin problemas.</p>
+        <span class="about-container__subtitle title-container">¿cómo lo hago?</span>
+        <p class="scroll-paragraphs2">Me gusta trabajar de cerca con mis clientes para comprender sus necesidades y ofrecer soluciones innovadoras que impulsen su negocio en línea.</p>
+        <p class="scroll-paragraphs2">Además, ofrezco servicios de mantenimiento y soporte para garantizar que los sitios web estén actualizados y funcionen sin problemas.</p>
       </article>
       <!-- CHECKPOINT -->
       <hr class="checkpoint" id="checkpoint-about-me">
@@ -126,7 +122,7 @@
       <header class="title-container">
         <h2>mis proyectos</h2>
       </header>
-      <p>Échale un vistazo a mi lista de proyectos seleccionados.</p>
+      <p class="scroll-paragraphs">Échale un vistazo a mi lista de proyectos seleccionados.</p>
       <div class="works-container__cards-container">
         <article class="work-card">
           <h3 class="work-card__title">Título del proyecto</h3>
@@ -169,32 +165,99 @@
           <span class="work-card__expand"></span>
         </article>
       </div>
-      <a href=""><span class="works-container__plus"></span>Mira más proyectos</a>
+      <a class="scroll-paragraphs" href="#"><span class="works-container__plus"></span>Mira más proyectos</a>
       <!-- CHECKPOINT -->
       <hr class="checkpoint" id="checkpoint-works">
     </section>
+    <div id="modal-background" class="modal-background-close"></div>
   </main>
+  <div class="bubble-container">
+    <div class="bubble-container__bubbles">
+      <span style="--i:17"></span>
+      <span style="--i:13"></span>
+      <span style="--i:28"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:25"></span>
+      <span style="--i:18"></span>
+      <span style="--i:21"></span>
+      <span style="--i:15"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:23"></span>
+      <span style="--i:18"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:16"></span>
+      <span style="--i:19"></span>
+      <span style="--i:20"></span>
+      <span style="--i:22"></span>
+      <span style="--i:25"></span>
+      <span style="--i:18"></span>
+      <span style="--i:21"></span>
+      <span style="--i:15"></span>
+      <span style="--i:18"></span>
+      <span style="--i:21"></span>
+      <span style="--i:15"></span>
+      <span style="--i:13"></span>
+      <span style="--i:26"></span>
+      <span style="--i:17"></span>
+      <span style="--i:13"></span>
+      <span style="--i:28"></span>
+      <span style="--i:17"></span>
+      <span style="--i:13"></span>
+      <span style="--i:28"></span>
+      <span style="--i:11"></span>
+      <span style="--i:12"></span>
+      <span style="--i:24"></span>
+      <span style="--i:10"></span>
+      <span style="--i:14"></span>
+      <span style="--i:20"></span>
+      <span style="--i:13"></span>
+      <span style="--i:26"></span>
+      <span style="--i:13"></span>
+      <span style="--i:26"></span>
+      <span style="--i:22"></span>
+      <span style="--i:25"></span>
+    </div>
+  </div>
   <footer class="contact-container" id="contact">
     <header class="title-container title-container--contact"><h2>contacto</h2></header>
-    <p>¿Listo para llevar tu proyecto al siguiente nivel? <br>¡Hagamos que suceda!</p>
+    <p class="scroll-paragraphs">¿Listo para llevar tu proyecto al siguiente nivel? <br>¡Hagamos que suceda!</p>
     <a class="button button--footer" href="#">Charlemos Hoy</a>
     <div class="contact-container__info-social">
-      <p>También puedes <br>encontrarme por aquí</p>
+      <p class="scroll-paragraphs">También puedes <br>encontrarme por aquí</p>
       <div class="social-media social-media--footer">
         <a target="_blank" href="#"><img src="/assets/icons/linkedin.svg" alt=""></a>
         <a target="_blank" href="#"><img src="/assets/icons/twitter.svg" alt=""></i></a>
         <a target="_blank" href="#"><img src="/assets/icons/github.svg" alt=""></a>
       </div>
     </div>
-    <p>Este portafolio es de código abierto, encuéntralo en mi <a href="#"> GitHub</a><span></span></p>
-    <p>Hecho por <span>John Jaramillo</span></p>
-    <ul class="contact-container__navmenu">
-      <a href="#home"><li>Inicio</li></a>
-      <a href="#checkpoint-services"><li>Servicios</li></a>
-      <a href="#checkpoint-about-me"><li>Sobre mi</li></a>
-      <a href="#checkpoint-works"><li>Proyectos</li></a>
+    <p class="scroll-paragraphs">Este portafolio es de código abierto, encuéntralo en mi <a href="#"> GitHub<span></span></a></p>
+    <p class="scroll-paragraphs3">Hecho por <span>John Jaramillo</span></p>
+    <ul class="contact-container__nav-menu scroll-paragraphs">
+      <li><a href="#home">Inicio</a></li>
+      <li><a href="#checkpoint-services">Servicios</a></li>
+      <li><a href="#checkpoint-about-me">Sobre mi</a></li>
+      <li><a href="#checkpoint-works">Proyectos</a></li>
     </ul>
     <a class="button-bottom button-bottom--goup" href="#home"><img src="/assets/icons/arrowUp.svg" alt="flecha para desplazar hacia arriba"></a>
   </footer>
+
+  <script src="/js/index.js"></script>
 </body>
 </html>

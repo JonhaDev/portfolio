@@ -1,3 +1,4 @@
+@use 'variables' as *;
 @use 'mixins' as *;
 
 .works-container {
@@ -22,11 +23,12 @@
     }
   }
   > a {
-    margin-top: 36px;
+    margin: 36px auto;
+    width: fit-content;
     display: block;
-    text-align: center;
-
+    @include textShadows(links);
     @include links(18px, blue-color);
+    @include hoverLinks();
     span {
       width: 13px;
       height: 13px;
@@ -36,6 +38,7 @@
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
+      @include shadows(icons2, $black);
     }
     @include media(tablet-s) {
       margin-top: 60px;

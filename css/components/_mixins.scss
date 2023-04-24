@@ -1,5 +1,9 @@
 @use 'variables' as *;
 
+@function getOpacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
 @function calculateRem($size) {
   @return calc($size/16px)*1rem;
 }
@@ -30,6 +34,9 @@
       min-width: 550px;
       max-width: 50%;
     }
+    @if ($type == subtitle) {
+      min-width: fit-content;
+    }
   }
 }
 
@@ -39,6 +46,7 @@
     text-transform: uppercase;
     font-weight: 400;
     @include font-size(26px, 32px);
+    @include textShadows(titles);
     @include media(tablet-s) {
       @include font-size(30px, 36px);
     }
@@ -46,6 +54,7 @@
   } @else if ($type == subtitle) {
     text-transform: uppercase;
     @include font-size(22px, 30px);
+    @include textShadows(titles);
     @include title-underline(subtitle);
     @include media(tablet-s) {
       @include font-size(26px, 34px);
@@ -66,12 +75,20 @@
 
 @mixin links($size, $color) {
   font-style: italic;
-
+  position: relative;
+  z-index: 100;
   @include font-size($size, $size);
-
   @if $color == blue-color {  
     color: $action-secundary-color;
   }
+}
+
+@mixin hoverLinks() {
+  &:hover {
+    border-bottom: 2px solid currentColor;
+    transition: all 400ms ease-out 50ms;
+  }
+  transition: all 300ms ease-in-out 30ms;
 }
 
 @mixin sections() {
@@ -86,14 +103,41 @@
   }
 }
 
-@mixin caja() {
-  padding: 28px;
-  border: 2px solid $action-secundary-color;
-  border-radius: 14px;
-  background-color: $primary-color;
+@mixin textShadows($type) {
+  @if ($type == home) {
+    text-shadow: 0 5px 3px getOpacity($black, .9);
+  } @else if ($type == titles) {
+    text-shadow: 0 6px 4px getOpacity($black, .7);
+  } @else if ($type == links) {
+    text-shadow: 0 3px 2px getOpacity($black, .8);
+  }
 }
 
-@mixin checkpoint {
+@mixin shadows($type, $color) {
+  @if ($type == navbars) {
+    box-shadow: 0 4px 16px getOpacity($color, .8);
+  } @else if ($type == icons) {
+    filter:drop-shadow(0 5px 3px getOpacity($color, .9));
+  } @else if ($type == icons2) {
+    filter:drop-shadow(0 2px 2px getOpacity($color, .8))
+  } @else if ($type == buttons) {
+    box-shadow: 0 3px 8px getOpacity($color, .8);
+  } @else if ($type == boxs) {
+    box-shadow: 0 6px 16px getOpacity($color, .7);
+  }
+}
+
+@mixin boxs() {
+  padding: 28px;
+  border: 2px solid $action-secundary-color;
+  position: relative;
+  z-index: 50;
+  border-radius: 14px;
+  background-color: $primary-color;
+  @include shadows(boxs, $black);
+}
+
+@mixin checkpoints {
   position: absolute;
   top: -44px;
   opacity: 0;
@@ -111,8 +155,4 @@
   @else if $breakpoint == desktop-s {  
     @media only screen and (min-width: 1280px) { @content; }
   }
-  
-  // @else if $breakpoint == desktop-m {  
-  //   @media only screen and (min-width: 1200px) { @content; }
-  // }
 }
