@@ -4,7 +4,7 @@ const navMenu = document.getElementById('topnav-menu');
 const fixSocialMedia = document.querySelector('.social-media--home');
 const modalBackground = document.getElementById('modal-background');
 const closeIcon = document.createElement('img');
-closeIcon.setAttribute('src', '/assets/icons/closeIcon.svg');
+closeIcon.setAttribute('src', '../assets/icons/closeIcon.svg');
 const btnHome = document.querySelector('.button--home');
 const btnBottomMailMe = document.querySelector('.button-bottom--contact');
 const servicesSection = document.getElementById('checkpoint-services');

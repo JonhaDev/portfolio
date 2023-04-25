@@ -1013,7 +1013,7 @@ ul {
   height: 13px;
   margin-right: 2px;
   display: inline-block;
-  background-image: url("/assets/icons/plus.svg");
+  background-image: url("../assets/icons/plus.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1315,7 +1315,7 @@ footer {
   margin-left: 2px;
   display: inline-block;
   align-self: center;
-  background-image: url("/assets/icons/arrowUR.svg");
+  background-image: url("../assets/icons/arrowUR.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
